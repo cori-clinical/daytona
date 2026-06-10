@@ -1,0 +1,14 @@
+diff --git a/apps/api/src/sandbox/managers/volume.manager.ts b/apps/api/src/sandbox/managers/volume.manager.ts
+index 7b85349..5d58378 100644
+--- a/apps/api/src/sandbox/managers/volume.manager.ts
++++ b/apps/api/src/sandbox/managers/volume.manager.ts
+@@ -100,8 +100,7 @@ export class VolumeManager
+       await this.s3Client.send(command)
+       this.logger.debug('Successfully connected to S3')
+     } catch (error) {
+-      this.logger.error('Failed to connect to S3:', error)
+-      throw error
++      this.logger.warn('S3 connection test failed (volumes may be unavailable):', error)
+     }
+   }
+ 

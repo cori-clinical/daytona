@@ -1,0 +1,23 @@
+diff --git a/docker/docker-compose.yaml b/docker/docker-compose.yaml
+index 736a09b..244f6d9 100644
+--- a/docker/docker-compose.yaml
++++ b/docker/docker-compose.yaml
+@@ -98,9 +98,7 @@ services:
+     restart: always
+     privileged: true
+     depends_on:
+-      - db
+       - runner
+-      - redis
+       - dex
+       - registry
+ 
+@@ -201,8 +199,6 @@ services:
+     volumes:
+       - ./pgadmin4/servers.json:/pgadmin4/servers.json
+       - ./pgadmin4/pgpass:/pgpass
+-    depends_on:
+-      - db
+     ports:
+       - 5050:80
+     networks:

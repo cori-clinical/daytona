@@ -1,0 +1,13 @@
+diff --git a/package.json b/package.json
+index b2e1fb5..de6569e 100644
+--- a/package.json
++++ b/package.json
+@@ -1,7 +1,7 @@
+ {
+   "name": "daytona",
+   "version": "0.0.0-dev",
+-  "license": "UNLICENSED",
++  "license": "AGPL-3.0-only",
+   "private": true,
+   "scripts": {
+     "postinstall": "is-ci || husky",
