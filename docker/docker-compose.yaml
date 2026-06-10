@@ -98,9 +98,7 @@ services:
     restart: always
     privileged: true
     depends_on:
-      - db
       - runner
-      - redis
       - dex
       - registry
 
@@ -201,8 +199,6 @@ services:
     volumes:
       - ./pgadmin4/servers.json:/pgadmin4/servers.json
       - ./pgadmin4/pgpass:/pgpass
-    depends_on:
-      - db
     ports:
       - 5050:80
     networks:

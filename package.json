@@ -1,7 +1,7 @@
 {
   "name": "daytona",
   "version": "0.0.0-dev",
-  "license": "UNLICENSED",
+  "license": "AGPL-3.0-only",
   "private": true,
   "scripts": {
     "postinstall": "is-ci || husky",

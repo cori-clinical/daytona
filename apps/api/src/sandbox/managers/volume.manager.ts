@@ -100,8 +100,7 @@ export class VolumeManager
       await this.s3Client.send(command)
       this.logger.debug('Successfully connected to S3')
     } catch (error) {
-      this.logger.error('Failed to connect to S3:', error)
-      throw error
+      this.logger.warn('S3 connection test failed (volumes may be unavailable):', error)
     }
   }
 
